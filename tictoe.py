@@ -2,7 +2,7 @@ import random
 
 gameIsOver=False
 
-abc={
+pole={
     "a":['-','-','-'],
     "b":['-','-','-'],
     "c":['-','-','-'],
@@ -17,7 +17,7 @@ if playerCharacter=="o":
 if playerCharacter=="x":
     computerCharacter="o"
 
-for key,value in abc.items():
+for key,value in pole.items():
     print(key,value)
 
 #while the game is going on
@@ -25,10 +25,11 @@ while gameIsOver==False:
     row=input("Input row(a,b,c): ")
     pos=input("Input position(1,2,3): ")
     pos=int(pos)-1
-    
-    abc[row][pos]=playerCharacter
-    for key,value in abc.items():
+
+    pole[row][pos]=playerCharacter
+    for key,value in pole.items():
         print(key,value)
+
     gameIsOver=True
 
-    
+
